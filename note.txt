@@ -1,0 +1,214 @@
+//Hàm Built-in
+
+1.alert : hiện thông báo
+2.console.log dùng để debug
+3.confirm: dùng để xác nhận
+4.prompt: dùng để xác nhận
+5.setTimeout() :truyền vào 1 function được chạy sau 1 khoảng thời gian
+ setTimeout( fuction() {
+},1000)
+6.setInterval(): thực thi sau 1 khoảng thời gian và thực hiên liên tục
+
+//Toán tử
+1 toán tử số học -Arithmetic	: var a=1+2;
+2 toán tử gán - Assignment 	: var fullName ='Chien';
+3 toán tử so sánh - Comparison:
+	var a = 1;
+	var b = 2;
+	if (a>b){
+		alert('Dung');
+	}
+4 toán tử logic - logical &&,or and
+
+//Toán tử số học
+	** là lũy thừa
+	++ 
+	--
+//Toán tử nối chuỗi
+	+ là toán tử nối chuỗi nếu 1 trong 2 phần tử ko phải số
+//Toán tử so sánh
+	trong jvscript thì o,false, '' hoặc "" , undefined , NaN, Null
+	thì jvs tự convert sang boolean là false
+//Dữ liệu phức tạp -Complex data
+	-function
+	-Object: bao gồm object và array
+// toán tử so sánh
+	=== : so sánh kĩ hơn về value và datatype
+	!== :
+// dùng !! để đưa về kiểu boolean
+// Quy tắc đặt tên hàm
+	a-z A-Z 0-9 _ $ : không được đặt số ở kí tự đầu tiên
+	fuction showDialog() {
+		alert('Hi xin chao cac ban');
+	}
+	showDialog();
+// Các loại function
+	Declaration function
+	Expression funcion
+	Arrow function
+// Chuỗi
+	Cách tạo chuỗi
+		var fullName = 'chien';
+		var fullName = new String('chien');
+	Case sử dụng backslash(\)
+		var fullName = 'Chien is a \'Sieu Nhan\'';
+		backslash \\
+	Xem độ dài chuỗi
+		fullName.length
+	Chú ý độ dài khi viết code : ko có 80 kí tự trên 1 dòng
+	Template string ES6: `Toi la : ${firstnam} ${lastnam}`
+// Làm việc với chuỗi : Javascript string methods
+	Find index : myString.indexOf('', vị trị bắt đầu cần tìm);
+		vd	 myString.indexOf('Js', 6)	
+			 myString.lastIndexOf('')
+	Search : hộ trợ tìm kiếm theo biểu thức chính quy
+	Cut String: myString.slice(vị trí đầu, vị trí cuối);
+	Replace: myString.replace(/JS/g,'Javascript')
+	Convert to upper case : myString.toUpperCase()
+	Convert to lower case : myString.tolowerCase()
+	Trim: loại bỏ kí tự khoảng trắng bị dư ở đầu cuối
+		myString.trim()
+	Split: cắt chuỗi thành array
+		languages.split
+	Get a character by index
+		myString.charAt(10)
+// Work with number (keywork Javascript number method)
+	NaN : là kiểu số ko hợp lệ, not a number
+	kiểm tra có phải kiểu NaN ko thì dùng hàm isNaN()
+	.toString() : chuyển số sang string
+	.toFixed() : làm tròn và đưa về kiểu string
+// Work with array
+	var language = [
+	'java',
+	'PHP',
+	'Ruby',
+];
+// js method
+	.toString() : chuyển array sang chuỗi
+	.join() :
+	.pop() : xóa element cuối mảng trả phần tử đã xóa
+	.push(): thêm phần tử cuối mảng
+	.shift(): xóa phần tử đầu mảng trả phần tử đó
+	.unshift(): thêm phần tử đầu mảng và trả độ dài
+	.splice(a,b,c): a là vị trí, b là số phầnf tử xóa, c là phàn tử chèn
+	.concat(): nối array : array1.concat(array2)
+	.slice():
+// Object trong JS
+	var myInfo ={
+	 name: 'Son Dang',
+	 age:18,
+	 address: 'HN,VN'
+	}
+	- Thêm key và value : myInfo.email = 'chien@gamil.com'
+				    myInfo['my-email']
+	- Lấy key ra : myInfo.name , myInfo['email']
+	- Xóa key: delete myInfo.key
+	- 
+// Object constructor ( viết hoa chữ cái đầu tiên)
+function User( firstName, lastName, avatar) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.avatar = avatar;
+    }
+
+    var author = new User('Chiến', 'Nguyễn', 'Avatar');
+    var user = new User('Ha', 'Nhat', 'Nguyen');
+
+    console.log(author);
+    console.log(user);
+	// Thêm thuộc tính 
+	author.title = 'Chia sẻ dạo tại f8';
+// Object prototype
+	Thêm thuộc tính và thêm phương thức
+		User.prototype.className = 'F8';
+		User.prototype.getClassName = function() {
+        		return this.className;
+    		}
+	* tất cả đều có thể kế thừa
+// Đối tượng date : đùng để lấy ngày
+ 	var date = new Date();
+	var year = date.getFullYear();
+// Math object
+	Math.PI : trả về số pi
+	Math.round(): làm tròn số
+	Math.abs(): trả giá trị tuyệt đối
+	Math.ceil(): chỉ làm tròn trên
+	Math.floor(): chỉ làm tròn dưới
+	Math.random(): random 1 số ngẫu nhiên nhỏ hơn 1		
+		var bonus= [
+  		 '10 coin',
+  		 '20 coin',
+   		 '30 coin',
+   		 '40 coin',
+   		 '50 coin',
+       	 '60 coin',
+  		 '70 coin',
+		];
+		var random = Math.floor(Math.random()*bonus.length)
+		console.log(bonus[random]);
+	Math.min(-90, 1, 90) : trả về số nhỏ nhất
+// Toán tử 3 ngôi (điều kiện)?kq1:kq2;
+// Vòng for/of : ko dùng cho object
+	for (var value of languages) {
+	 
+	}	
+// Vòng while
+	var i = 0;
+	while (i < 1000){
+		i++;
+	}
+// Đệ quy : hàm tự gọi là chính nó
+	- Xác định điểm dừng
+	- Logic handle
+//Array phần 2 
+	.forEach(đối số, index, array) : duyệt qua từng thành phần của mảng
+	.every(): kiểm tra các phần tử có đúng điều kiện hay ko
+	.some(): chỉ cần có 1 phần tử đúng đk là trả về true
+	.find():
+	.filter():lọc những từ cần tìm
+	.map() : có 3 tham số course , index , originArray
+// .includes trong string/array
+	 dùng để tìm kiếm từ trong chuỗi hoặc mảng
+	 cấu trúc:
+		.includes(' từ cần tìm', ví trí bắt đầut ìm);
+
+	 truyền số âm thì nó hiểu là độ dài + (số âm);
+// Nâng cao
+	this.hasOwnProperty() kiểm tra xem phần từ có nằm trong prototype ko trả về boolean
+
+// HTML DOM : document object model
+Có 3 thành phần : Root element <html>
+			attribute : các thuộc tính như class,id, href
+			text : các đoạn chứ nọi dung
+// Node : điểm giao nhau
+// Get element methods
+	Get qua ID, class, tag( tên thẻ ) , css selector ( dùng querySelector), HTML colection
+	class name + tag name trả về html colection
+//DOM event
+//JSON là gì
+	Là 1 format, định dạng dữ liệu ( chuỗi )
+	JavaScript Object Notation
+	JSON: Number, boolean, Null, Array, Object
+	Thao tác mã hóa và giải mã từ JS sang JSON và ngược lại
+	Stringify(chuyển đổi) / Parse( trả lại)
+//Promise
+	-Sync: ai viết trc chạy trc, ai viết sau chạy sau
+	-Async: vd như setTimeout, SetInterval, fetch, XMLHttpRequest, file reading, request animation
+	-Callback hell
+	-Pyramid Doom
+//Promise
+	promise.resolve
+	promise.reject
+	promise.all
+
+//CRUD :
+	- Create : tạo mới
+	- Read : lấy dữ liệu
+	- Update : Chỉnh sauwr
+	- delate
+//ES6
+ 	Hoisting : sẽ đưa khái niệm khai báo lên đầu cho những từ ngữ
+	const: có thể thay đổi thuộc tính 
+/// Template literals ( thêm dấu \)
+	... laf toans tuwr rest
+129 và 128 chưa học
